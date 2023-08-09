@@ -1,0 +1,192 @@
+/*Aerialoop ET*/
+@font-face {
+  font-family: 'Space Grotesk Bold';
+  src: url("./fonts/SpaceGrotesk/SpaceGrotesk-Bold.woff2") format("woff2"),
+    url("./fonts/SpaceGrotesk/SpaceGrotesk-Bold.ttf") format("truetype"),
+    url("./fonts/SpaceGrotesk/SpaceGrotesk-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Space Grotesk Regular';
+  src: url("./fonts/SpaceGrotesk/SpaceGrotesk-Regular.woff2") format("woff2"),
+    url("./fonts/SpaceGrotesk/SpaceGrotesk-Regular.ttf") format("truetype"),
+    url("./fonts/SpaceGrotesk/SpaceGrotesk-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Anek Tamil Expanded Bold';
+  src: url('./fonts/AnekTamill/AnekTamil_Expanded-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Tamil Expanded ExtraBold';
+  src: url('./fonts/AnekTamill/AnekTamil_Expanded-ExtraBold.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Tamil Expanded ExtraLight';
+  src: url('./fonts/AnekTamill/AnekTamil_Expanded-ExtraLight.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Tamil Expanded Light';
+  src: url('./fonts/AnekTamill/AnekTamil_Expanded-Light.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Tamil Expanded Regular';
+  src: url('./fonts/AnekTamill/AnekTamil_Expanded-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --abox-c-darkBlue: #1F2848;
+  --abox-c-darkBlueGray: #212840;
+  --abox-c-darkBlueRGB: rgba(31, 40, 72, 1);
+  --abox-c-darkBlueAlpha: rgba(31, 40, 72, 0.8);
+  --abox-c-ligthBlue: #184F9E;
+  --abox-c-ligthBlueRGB: rgba(24, 79, 158, 1);
+  --abox-c-ligthBlueAlpha: rgba(24, 79, 158, 0.8);
+  --abox-c-ligthGray: #989999;
+  --abox-c-ultraLigthGray: #d1d1d1;
+  --abox-c-black: #000;
+  --abox-c-white: #ffffff;
+  --abox-c-whiteAlpha: rgba(255, 255, 255, 0.5);
+  --abox-c-yellow: #c48e11;
+  --abox-c-green: #4ca825;
+  --abox-c-red: #a21f1f;
+}
+
+/*initialization main objects*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Anek Tamil Expanded Bold";
+}
+
+.ep-menu--horizontal>.ep-menu-item {
+  font-family: "Space Grotesk Regular";
+}
+
+
+body {
+  background: var(--color-background);
+  line-height: 1.6;
+  font-family: 'Space Grotesk Regular';
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  #login {
+    --ep-bg-color-overlay: var(--abox-c-darkBlue) !important;
+    --ep-fill-color-blank: var(--abox-c-darkBlue) !important;
+
+    .ep-button--primary {
+      --ep-button-bg-color: var(--abox-c-darkBlue) !important;
+      --ep-button-border-color: var(--abox-c-white);
+    }
+
+    .ep-input__wrapper {
+      box-shadow: 0 0 0 0 !important;
+      border-bottom: 1px solid var(--abox-c-white);
+      border-radius: 0;
+    }
+
+    .ep-input__inner {
+      color: var(--abox-c-white) !important;
+    }
+
+    .ep-form-item__error {
+      color: var(--abox-c-red);
+      font-size: 11px;
+      text-align: left;
+    }
+
+    a:-webkit-any-link {
+      color: var(--abox-c-white) !important;
+      font-size: 12px;
+    }
+  }
+}
+
+html.dark {
+  /* custom dark bg color */
+  --el-bg-color: var(--abox-c-ligthBlue);
+  --ep-color-black: var(--abox-c-darkBlue);
+
+  body {
+    --color-background: var(--abox-c-darkBlue);
+
+    .ep-menu-item:hover {
+      background-color: var(--abox-c-darkBlue) !important;
+    }
+
+    #login {
+      --ep-fill-color-blank: var(--abox-c-white) !important;
+      --ep-bg-color-overlay: var(--abox-c-white) !important;
+
+      .ep-button--primary {
+        --ep-button-bg-color: var(--abox-c-darkBlue) !important;
+      }
+
+      .ep-input__wrapper {
+        border-bottom: 1px solid var(--abox-c-darkBlue);
+      }
+
+      .ep-input__inner {
+        color: var(--abox-c-darkBlue) !important;
+      }
+
+      .ep-form-item__error {
+        color: var(--abox-c-red);
+        font-size: 11px;
+        text-align: left;
+      }
+
+      a:-webkit-any-link {
+        color: var(--abox-c-ligthBlue) !important;
+        font-size: 12px;
+      }
+    }
+
+    #tableList {
+      .ep-table {
+        --ep-table-header-bg-color: var(--abox-c-darkBlue) !important;
+        --ep-table-border-color: var(--ep-border-color);
+        --ep-table-row-hover-bg-color: var(--abox-c-darkBlueGray);
+
+        td.ep-table__cell {
+          border-color: var(--ep-border-color);
+        }
+      }
+    }
+  }
+}
+
+.mw-1024 {
+  max-width: 1024px;
+}
+
+.x-container {
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: var(--abox-c-ligthGray);
+}

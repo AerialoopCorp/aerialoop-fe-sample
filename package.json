@@ -1,0 +1,43 @@
+{
+  "name": "element-plus-vite-starter",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "npx serve -p $PORT dist/",
+    "dev": "vite",
+    "build": "vite build",
+    "generate": "vite-ssg build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.9",
+    "@fawmi/vue-google-maps": "^0.9.72",
+    "apexcharts": "^3.36.0",
+    "axios": "^0.27.2",
+    "element-plus": "^2.2.2",
+    "node-fetch": "^3.2.10",
+    "pinia": "^2.0.17",
+    "pinia-plugin-persistedstate": "^2.1.0",
+    "vue": "^3.2.36",
+    "vue-cesium": "^3.1.0",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.0.13",
+    "vue3-apexcharts": "^1.4.1"
+  },
+  "devDependencies": {
+    "@iconify-json/ep": "^1.1.4",
+    "@types/cookies": "^0.7.7",
+    "@types/node": "^17.0.35",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "sass": "^1.52.1",
+    "serve": "^12.0.0",
+    "typescript": "^4.7.2",
+    "unocss": "^0.34.1",
+    "unplugin-vue-components": "^0.19.5",
+    "vite": "^2.9.9",
+    "vite-ssg": "^0.20.0",
+    "vue-tsc": "^0.34.16"
+  },
+  "license": "MIT"
+}
