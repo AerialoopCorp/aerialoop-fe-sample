@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 
-
-
 const props = defineProps(['data', 'name'])
 
 const series = [{
@@ -47,7 +45,7 @@ const chartOptions = {
     xaxis: {
         labels: {
             formatter: function (val: number) {
-                return props.data && props.data.length ? ((val - props.data[0][0]) / 1000000).toFixed(0) : val;
+                return val;
             },
         },
         title: {

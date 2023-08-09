@@ -53,6 +53,7 @@ const chart_categories = computed(() => {
                        ylabel="Aircrafts" height="500" />
 
       <Chart :data="power" :name="t('views.dashboard.title')" />
+      <ScatterChart :data="power" :name="t('views.dashboard.title')" />
     </el-card>
   </div>
 </template>
